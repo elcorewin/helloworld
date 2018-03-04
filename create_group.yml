@@ -1,0 +1,9 @@
+---
+- name: Create a local group
+  hosts: all
+  tasks:
+    - name: Create group
+      win_group:
+        name: TestGroup
+        description: "Test Group"
+        state: present  
