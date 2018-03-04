@@ -1,4 +1,5 @@
- - name: Install IIS (Web-Server only)
+---
+- name: Install IIS (Web-Server only)
    win_feature:
     hosts: all
     name: Web-Server
