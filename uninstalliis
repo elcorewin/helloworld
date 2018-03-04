@@ -1,0 +1,9 @@
+---
+- name: UnInstall IIS
+  hosts: all
+  tasks:
+    - name: UnInstall IIIS
+      win_feature:
+        name: Web-Server
+        state: absent
+        restart: yes
