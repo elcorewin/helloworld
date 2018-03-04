@@ -2,9 +2,9 @@
 - name: Install IIS (Web-Server only)
   hosts: all
   tasks:
-  win_feature:
-    name: Web-Server
-    description: "Deploy IIS Role"
-    state: present
-    include_sub_features: true
-    include_management_tools: true
+    win_feature:
+      name: Web-Server
+      description: "Deploy IIS Role"
+      state: present
+      include_sub_features: true
+      include_management_tools: true
