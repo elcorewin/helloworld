@@ -7,5 +7,3 @@
         name: Web-Server
         description: "Deploy IIS Role"
         state: present
-        include_sub_features: true
-        include_management_tools: true
