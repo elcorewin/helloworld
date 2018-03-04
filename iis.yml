@@ -1,9 +1,9 @@
 ---
-- name: Install IIS (Web-Server only)
+- name: Install IIS
   hosts: all
   tasks:
-    -name: Install IIIS
+    - name: Install IIIS
       win_feature:
         name: Web-Server
-        description: "Deploy IIS Role"
         state: present
+        restart: yes
