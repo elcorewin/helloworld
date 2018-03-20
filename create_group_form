@@ -1,0 +1,9 @@
+---
+- name: Create a local group form
+  hosts: all
+  tasks:
+    - name: Create group
+      win_group:
+        name: "{{group_name}}"
+        description: "{{group_desc}}"
+        state: present 
