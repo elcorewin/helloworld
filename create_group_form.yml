@@ -7,3 +7,8 @@
         name: "{{group_name}}"
         description: "{{group_desc}}"
         state: present 
+    - name: Add users to created group
+      win_group_membership:
+        name: "{{group_name}}"
+        members: "{{member}}"
+        state: present 
