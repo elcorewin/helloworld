@@ -1,8 +1,5 @@
 - name: Create a VM from a template
   vmware_guest:
-    hostname: 192.168.44.20
-    username: administrator@vsphere.local
-    password: vmware
     validate_certs: no
     name: testvm_2
     state: poweredon
