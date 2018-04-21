@@ -34,6 +34,5 @@
       domain: int.lokhand.local
       dns_servers:
       - 192.168.44.8
-      
   delegate_to: localhost
   register: deploy
