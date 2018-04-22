@@ -13,7 +13,7 @@
         hostname:"{{vc_hostname}}"
         username:"{{vc_username}}"
         password:"{{vc_password}}"
-        validate_certs: false
+        validate_certs: no
         datacenter: VASAI
         name: "VM001"
         template: "WinVMTemplate"
