@@ -11,13 +11,9 @@
     - name: Create VM from template
       vmware_guest:
         validate_certs: False
-        hostname: "{{ vcenter_hostname }}"
-        username: "{{ vcenter_user }}"
-        password: "{{ vcenter_pass }}"
-        esxi_hostname: "{{ esxhost }}"
-        datacenter: BOX
-        name: "{{ name }}"
-        template: "{{ vmtemplate }}"
+        datacenter: VASAI
+        name: "VM001"
+        template: "WinVMTemplate"
         disk:
           - size_gb: "{{ disk_size | default(20) }}"
             type: thin
