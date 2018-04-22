@@ -10,20 +10,21 @@
   tasks:
     - name: Create VM from template
       vmware_guest:
-        validate_certs: no
+        
         hostname:"{{vc_hostname}}"
         username:"{{vc_username}}"
         password:"{{vc_password}}"
-        datacenter: "VASAI"
-        name: "VM001"
-        template: "WinVMTemplate"
+        validate_certs: false
+        datacenter: VASAI
+        name: VM001
+        template: WinVMTemplate
         disk:
           - size_gb: "{{ disk_size | default(20) }}"
             type: thin
-            datastore: "LUN002"
+            datastore: LUN002
         networks:
-          - device_type: "e1000e"
-            network: "VM Network"
+          - device_type: e1000e
+            network: VM Network
         hardware:
           memory_mb: "{{ vm_memory | default(1024) }}"
         wait_for_ip_address: false
