@@ -10,10 +10,10 @@
   tasks:
     - name: Create VM from template
       vmware_guest:
+        validate_certs: no
         hostname:"{{vc_hostname}}"
         username:"{{vc_username}}"
         password:"{{vc_password}}"
-        validate_certs: "no"
         datacenter: "VASAI"
         name: "VM001"
         template: "WinVMTemplate"
