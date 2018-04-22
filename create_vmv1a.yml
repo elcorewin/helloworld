@@ -1,38 +1,39 @@
 ---
 - name: Create a VM from a template
-  vmware_guest:
-    validate_certs: no
-    datacenter: VASAI
-    cluster: Cluster001
-    name: testvm_2
-    state: poweredon
-    template: WinVMTemplate
-    disk:
-    - size_gb: 20
-      type: thin
-      datastore: LUN002
-    hardware:
-      memory_mb: 1024
-      num_cpus: 1
-      num_cpu_cores_per_socket: 1
-      scsi: paravirtual
-      memory_reservation: 1024
-      memory_reservation_lock: True
-      mem_limit: 8096
-      mem_reservation: 4096
-      cpu_limit: 8096
-      cpu_reservation: 4096
-      max_connections: 5
-      hotadd_cpu: True
-      hotremove_cpu: True
-      hotadd_memory: False
-    networks:
-    - name: VM Network
-      ip: 192.168.44.100
-      netmask: 255.255.255.0
-      gateway: 192.168.44.1
-      domain: int.lokhand.local
-      dns_servers:
-      - 192.168.44.8
-  delegate_to: localhost
-  register: deploy
+  tasks:  
+      vmware_guest:
+        validate_certs: no
+        datacenter: VASAI
+        cluster: Cluster001
+        name: testvm_2
+        state: poweredon
+        template: WinVMTemplate
+        disk:
+        - size_gb: 20
+          type: thin
+          datastore: LUN002
+        hardware:
+          memory_mb: 1024
+          num_cpus: 1
+          num_cpu_cores_per_socket: 1
+          scsi: paravirtual
+          memory_reservation: 1024
+          memory_reservation_lock: True
+          mem_limit: 8096
+          mem_reservation: 4096
+          cpu_limit: 8096
+          cpu_reservation: 4096
+          max_connections: 5
+          hotadd_cpu: True
+          hotremove_cpu: True
+          hotadd_memory: False
+        networks:
+        - name: VM Network
+          ip: 192.168.44.100
+          netmask: 255.255.255.0
+          gateway: 192.168.44.1
+          domain: int.lokhand.local
+          dns_servers:
+          - 192.168.44.8
+      delegate_to: localhost
+      register: deploy
