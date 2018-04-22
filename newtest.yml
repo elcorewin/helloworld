@@ -23,8 +23,8 @@
             datastore: LUN002
         networks:
           - device_type: e1000e
-            network: VM Network
-          - vlan: 1234
+          - name: VM Network
+          
         hardware:
           memory_mb: "{{ vm_memory | default(1024) }}"
         wait_for_ip_address: false
