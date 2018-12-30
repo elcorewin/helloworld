@@ -2,6 +2,7 @@
 - name: Ensure user bob is present with address information
   hosts: all
   tasks:
+    -name: Create user Bob with DA rights
     win_domain_user:
       name: bob
       firstname: Bob
