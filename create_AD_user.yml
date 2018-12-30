@@ -1,5 +1,6 @@
 ---
 - name: Ensure user bob is present with address information
+  hosts: all
   tasks:
     win_domain_user:
       name: bob
