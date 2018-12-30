@@ -2,20 +2,10 @@
 - name: Ensure user bob is present with address information
   hosts: all
   tasks:
-    -name: Create user Bob with DA rights
-    win_domain_user:
-      name: bob
-      firstname: Bob
-      surname: Smith
-      company: BobCo
-      password: B0bP4ssw0rd
-      state: present
-      groups:
-        - Domain Admins
-      street: 123 4th St.
-      city: Sometown
-      state_province: IN
-      postal_code: 12345
-      country: US
-      attributes:
-        telephoneNumber: 555-123456
+    - name: Bob user created with DA rights
+      win_domain_user:
+        name: Bob
+        firstname: Smith
+        password: B0bP4ssw0rd
+        path: CN=Users,DC=int,DC=foresta,DC=local
+        state: present
