@@ -4,8 +4,8 @@
   tasks:
     - name: Bob user created with DA rights
       win_domain_user:
-        name: Bob
-        firstname: Smith
-        password: B0bP4ssw0rd
+        name: "{{user_name}}"
+        firstname: "{{first_name}}"
+        password: "{{initial_password}}"
         path: CN=Users,DC=int,DC=foresta,DC=local
         state: present
