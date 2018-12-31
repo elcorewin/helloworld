@@ -7,5 +7,5 @@
         name: "{{user_name}}"
         firstname: "{{first_name}}"
         password: "{{initial_password}}"
-        path: CN=Users,DC=int,DC=foresta,DC=local
+        path: "{{ou_path}}"
         state: present
