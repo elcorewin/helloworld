@@ -1,11 +1,7 @@
 ---
-- name: Ensure user bob is present with address information
+- name: Get Organizational Units
   hosts: all
   tasks:
-    - name: Bob user created with DA rights
-      win_domain_user:
-        name: "{{user_name}}"
-        firstname: "{{first_name}}"
-        password: "{{initial_password}}"
-        path: "{{ou_path}}"
-        state: present
+    - name: Get Organizational Units
+      win_shell:
+      Get-ADOrganizationalUnit -Filter 'Name -like "*"' | Select-Object 'DistinguishedName' | Write-Output
