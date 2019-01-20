@@ -2,7 +2,7 @@
 - name: Get Organizational Units
   hosts: all
   vars:
-    ous:none
+    - ous:none
   tasks:
     - name: Get Organizational Units
       win_shell: C:\Scripts\Get-OUs.ps1
