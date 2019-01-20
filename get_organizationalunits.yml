@@ -6,6 +6,6 @@
   tasks:
     - name: Get Organizational Units
       win_shell: C:\Scripts\Get-OUs.ps1
-      register:ou_results
-      set_fact:ous="{{ou_results.stdout_lines}}"
+      register: ou_results
+    -set_fact: ous="{{ou_results.stdout_lines}}"
       
