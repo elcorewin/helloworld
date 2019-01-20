@@ -3,5 +3,5 @@
   hosts: all
   tasks:
     - name: Get Organizational Units
-      win_shell: |
-      Get-ADOrganizationalUnit -Filter 'Name -like "*"' | Select-Object 'DistinguishedName' | Write-Output
+      win_shell: C:\Scripts\Get-OUs.ps1
+      
