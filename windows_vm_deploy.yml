@@ -12,6 +12,7 @@
       vmware_guest:
         validate_certs: false
         datacenter: VASAI
+        folder: /
         name: VM001
         template: WinVMTemplate
         disk:
