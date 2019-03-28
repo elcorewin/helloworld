@@ -26,6 +26,13 @@
             netmask: 255.255.255.0
             gateway: 192.168.44.1
             dns_servers: 192.168.44.8
+        customization:
+            autologon: yes
+            dns_servers:
+             - 192.168.44.8
+             - 192.168.1.2
+            domain: int.lokhand.local
+            password: Atos@2020
         hardware:
           memory_mb: "{{ vm_memory | default(1024) }}"
         wait_for_ip_address: false
